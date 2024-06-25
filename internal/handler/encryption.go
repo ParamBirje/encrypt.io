@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/parambirje/encrypt.io/internal/cypher"
 	"github.com/parambirje/encrypt.io/internal/validation"
 )
 
@@ -24,8 +25,8 @@ func EncryptionHandler() {
 	// Getting a new password
 	password := GetPassword()
 
-	fmt.Println(password)
 	fmt.Println("Starting encryption...")
+	cypher.Encrypt(filePath, password)
 	fmt.Println("Successfully encrypted.")
 
 }
