@@ -12,6 +12,20 @@ func main() {
 		help()
 		os.Exit(0)
 	}
+
+	handler := os.Args[1]
+	switch handler {
+	case "encrypt":
+		// call encryptionservice
+	case "decrypt":
+		// call decryptionservice
+	case "help":
+		help()
+	default:
+		fmt.Printf("\nCommand: %v not found.\n", handler)
+		fmt.Println("Run `help` command for usage intructions.")
+		os.Exit(1)
+	}
 }
 
 func help() {
