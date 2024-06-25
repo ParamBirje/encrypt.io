@@ -20,7 +20,7 @@ func main() {
 	case "encrypt":
 		handler.EncryptionHandler()
 	case "decrypt":
-		// call decryptionservice
+		handler.DecryptionHandler()
 	case "help":
 		help()
 	default:

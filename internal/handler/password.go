@@ -9,10 +9,10 @@ import (
 
 func CreatePassword() []byte {
 
-	fmt.Println("\nCreate a password:")
+	fmt.Println("\nCreate a password: ")
 	password, _ := term.ReadPassword(0)
 
-	fmt.Println("\tConfirm the password:")
+	fmt.Println("\tConfirm the password: ")
 	confirmPassword, _ := term.ReadPassword(0)
 
 	// Matching the passwords
@@ -26,7 +26,7 @@ func CreatePassword() []byte {
 
 func GetPassword() []byte {
 
-	fmt.Println("\nEnter password:")
+	fmt.Println("\nEnter password: ")
 	password, _ := term.ReadPassword(0)
 
 	return password
