@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/parambirje/encrypt.io/internal/handler"
 )
 
 func main() {
@@ -13,16 +15,16 @@ func main() {
 		os.Exit(0)
 	}
 
-	handler := os.Args[1]
-	switch handler {
+	handlerFunction := os.Args[1]
+	switch handlerFunction {
 	case "encrypt":
-		// call encryptionservice
+		handler.EncryptionHandler()
 	case "decrypt":
 		// call decryptionservice
 	case "help":
 		help()
 	default:
-		fmt.Printf("\nCommand: %v not found.\n", handler)
+		fmt.Printf("\nCommand: %v not found.\n", handlerFunction)
 		fmt.Println("Run `help` command for usage intructions.")
 		os.Exit(1)
 	}
