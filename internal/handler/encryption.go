@@ -25,7 +25,7 @@ func EncryptionHandler() {
 	// Getting a new password
 	password := CreatePassword()
 
-	fmt.Println("Starting encryption...")
+	fmt.Println("\n\nStarting encryption...")
 	cypher.Encrypt(filePath, password)
 	fmt.Println("Successfully encrypted.")
 

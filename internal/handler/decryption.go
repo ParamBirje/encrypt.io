@@ -25,7 +25,7 @@ func DecryptionHandler() {
 	// Getting a new password
 	password := GetPassword()
 
-	fmt.Println("Starting decryption...")
+	fmt.Println("\n\nStarting decryption...")
 	cypher.Decrypt(filePath, password)
 	fmt.Println("Successfully decrypted file, now ready to use.")
 
