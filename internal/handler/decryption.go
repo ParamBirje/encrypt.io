@@ -8,7 +8,7 @@ import (
 	"github.com/parambirje/encrypt.io/internal/validation"
 )
 
-func EncryptionHandler() {
+func DecryptionHandler() {
 
 	// Checking if file path is passed
 	if len(os.Args) < 3 {
@@ -23,10 +23,10 @@ func EncryptionHandler() {
 	}
 
 	// Getting a new password
-	password := CreatePassword()
+	password := GetPassword()
 
-	fmt.Println("Starting encryption...")
-	cypher.Encrypt(filePath, password)
-	fmt.Println("Successfully encrypted.")
+	fmt.Println("Starting decryption...")
+	cypher.Decrypt(filePath, password)
+	fmt.Println("Successfully decrypted file, now ready to use.")
 
 }

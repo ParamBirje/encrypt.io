@@ -7,7 +7,7 @@ import (
 	term "golang.org/x/term"
 )
 
-func GetPassword() []byte {
+func CreatePassword() []byte {
 
 	fmt.Println("\nCreate a password:")
 	password, _ := term.ReadPassword(0)
@@ -22,5 +22,12 @@ func GetPassword() []byte {
 	}
 
 	return password
+}
 
+func GetPassword() []byte {
+
+	fmt.Println("\nEnter password:")
+	password, _ := term.ReadPassword(0)
+
+	return password
 }
