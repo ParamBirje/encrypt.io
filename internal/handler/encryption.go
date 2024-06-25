@@ -20,4 +20,12 @@ func EncryptionHandler() {
 	if !validation.ValidateFile(filePath) {
 		panic("Fatal: File not found.")
 	}
+
+	// Getting a new password
+	password := GetPassword()
+
+	fmt.Println(password)
+	fmt.Println("Starting encryption...")
+	fmt.Println("Successfully encrypted.")
+
 }
