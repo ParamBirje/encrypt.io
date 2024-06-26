@@ -6,7 +6,7 @@ import (
 	"github.com/parambirje/encrypt.io/internal/validation"
 )
 
-var testcases = []struct {
+var ValidatePasswordTestcases = []struct {
 	name      string
 	password  string
 	password2 string
@@ -18,7 +18,7 @@ var testcases = []struct {
 }
 
 func TestValidatePassword(t *testing.T) {
-	for _, testcase := range testcases {
+	for _, testcase := range ValidatePasswordTestcases {
 		t.Run(testcase.name, func(t *testing.T) {
 			got := validation.ValidatePassword([]byte(testcase.password), []byte(testcase.password2))
 			want := testcase.want
